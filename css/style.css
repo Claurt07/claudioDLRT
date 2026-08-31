@@ -131,8 +131,9 @@ nav li a {
 
 /* Home section */
 #home {
-    background: url(../img/shang.png);
+    background: url(../img/baylah-sudan-low-intervened.png);
     background-size: cover;
+    background-position: center 10%;
     height: 100vh;
 }
 .table-cell { display: table-cell; vertical-align: middle; }
@@ -397,4 +398,121 @@ nav li a {
 @media (max-width: 420px) {
     nav li { margin: 6px; }
     nav li a { font-size: 10px; }
+}
+
+/* ==================================================
+   Architectural Experience Toggle Styles
+   ==================================================*/
+.exp-details {
+    margin-top: 10px;
+}
+
+.exp-details summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #E82E21;
+    letter-spacing: 0.5px;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+}
+
+.exp-details summary::-webkit-details-marker,
+.exp-details summary::marker {
+    display: none;
+}
+
+.exp-details summary:hover {
+    color: #111111;
+}
+
+.exp-details summary .toggle-icon {
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.exp-details[open] summary .toggle-icon {
+    transform: rotate(45deg); /* Converts + into x when open */
+}
+
+.exp-expanded-content {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.exp-expanded-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 8px;
+}
+
+.exp-doc-link {
+    color: #E82E21;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+}
+
+.exp-doc-link:hover {
+    color: #111111;
+}
+
+/* ==================================================
+   Hero Subtitle Highlight (Global: Desktop & Mobile)
+   ==================================================*/
+.hero-highlight {
+    background-color: rgba(255, 255, 255, 0.90);
+    color: #222222 !important;
+    padding: 0px 6px; /* Reduced vertical padding to 0px */
+    line-height: 1.5;  /* Tightens the vertical box height */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+}
+
+/* ==================================================
+   Mobile-Only Adjustments (#home)
+   ==================================================*/
+@media (max-width: 768px) {
+    #home {
+        background-position: center center !important;
+        background-size: cover !important;
+        height: 100vh;
+    }
+
+    #home h4 {
+        margin-left: 30px !important;
+        font-size: 13px !important;
+    }
+
+    #home h4:before {
+        width: 20px !important;
+        left: -30px !important;
+    }
+
+    #home h1 {
+        font-size: 32px !important;
+        line-height: 40px !important;
+        word-wrap: break-word;
+    }
+
+    #home h3 {
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+
+    /* Title text turns white on mobile screens only */
+    .hero-title-mobile {
+        color: #ffffff !important;
+    }
 }
