@@ -516,3 +516,33 @@ nav li a {
         color: #ffffff !important;
     }
 }
+
+/* ==================================================
+   Mobile Timeline Illumination (Always On)
+   ==================================================*/
+@media (max-width: 768px) {
+    /* Disable AOS scroll-hide so timeline elements are instantly visible */
+    #experience .timeline-event,
+    #experience .timeline-event[data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+        transition: none !important;
+    }
+
+    /* Force the date thumbnail badge to stay fully illuminated */
+    .timeline-event-thumbnail {
+        opacity: 1 !important;
+        background-color: #E82E21 !important;
+        color: #ffffff !important;
+        visibility: visible !important;
+        box-shadow: 0 2px 8px rgba(232, 46, 33, 0.3) !important;
+    }
+
+    /* Ensure the timeline icon dot stays lit */
+    .timeline-event-icon {
+        background-color: #E82E21 !important;
+        border-color: #E82E21 !important;
+        opacity: 1 !important;
+    }
+}
