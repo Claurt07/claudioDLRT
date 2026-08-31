@@ -328,14 +328,16 @@ nav li a {
 }
 
 /* Modal Media & Carousel Images */
+/* Constrain all single modal images and videos to fit comfortably on screen */
 .modal-media-clean img,
-.modal-media-clean video,
-.carousel-inner > .item img {
-    width: 100%;
+.modal-media-clean video {
     max-width: 100%;
+    max-height: 800px; /* Caps the maximum height on screen */
+    width: auto;       /* Prevents stretching out of proportion */
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;    /* Keeps image centered */
+    margin-top: 2%;
 }
 /* Carousel Captions */
 .carousel-caption { background: rgba(0, 0, 0, 0.75); padding: 10px 15px; bottom: 0px; }
